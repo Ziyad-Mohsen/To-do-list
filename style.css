@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 139, 44, 1) 0%,
+    rgba(119, 44, 3, 1) 90%
+  );
+}
+
+.container {
+  width: 600px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #00000061;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.container h1 {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 20px;
+  letter-spacing: 6px;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+}
+
+.container .form {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #453b3b;
+  border-radius: 6px;
+}
+
+.container .form input[type="text"] {
+  flex-grow: 1;
+  min-width: 200px;
+  padding: 8px;
+  font-size: 20px;
+  transition: transform 0.3s;
+  color: black;
+  background-color: rgb(255 255 255 / 40%);
+}
+.container .form input:focus {
+  outline: none;
+  transform: translateY(-2px);
+}
+.container .form button.add {
+  flex: 0.2;
+  padding: 12px;
+  margin-left: 10px;
+  color: #000;
+  background-color: #72ec35;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  transition: 0.3s;
+}
+
+.container .form button.add:hover {
+  background-color: #72ec35cc;
+  transform: translateY(-3px);
+}
+
+input {
+  border: none;
+  border-radius: 6px;
+}
+
+.tasks {
+  border-radius: 6px;
+  background-color: #f7f7f733;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.task {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 15px;
+  background-color: #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.task.done {
+  position: relative;
+  opacity: 50%;
+  transition: 0.3s;
+}
+
+.task.done::before {
+  content: "";
+  height: 2px;
+  width: calc(100% - 120px);
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transition: 0.3s;
+}
+
+.task-text {
+  overflow-wrap: anywhere;
+  flex-grow: 1;
+}
+
+.task.done .del {
+  background-color: #3c3838;
+}
+
+.del {
+  border: none;
+  color: white;
+  background-color: red;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.del:hover {
+  transform: translateY(-2px);
+  background-color: rgb(233, 3, 3);
+}
+
+.dltall {
+  background-color: red;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
