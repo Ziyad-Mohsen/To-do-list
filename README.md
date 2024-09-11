@@ -2,7 +2,7 @@
 
 ## Description
 
-A simple and interactive **To-Do List** application built with **HTML**, **CSS**, and **JavaScript**. This project allows users to add, delete, and mark tasks as completed. It is a great project for learning DOM manipulation and basic JavaScript functionality.
+A simple and interactive **To-Do List** application built with **HTML**, **CSS**, and **JavaScript**. This project allows users to add, delete, and mark tasks as completed. It is a great project for learning DOM manipulation and basic JavaScript functionality. Live Demo [here](https://ziyad-mohsen.github.io/To-do-list)
 
 ## Technologies Used
 
